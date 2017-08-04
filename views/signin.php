@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>Sign-In</title>
 </head>
 <body>
-    <form action="signup" method="post">
-    <div class="form-signup">
+    <form action="signin" method="post">
+    <div class="form-signin">
         <label>Username :</label>
         <input class="form-control" type="text" name="username" value=""/>
     </div><br>
 
-    <div class="form-signup">
+    <div class="form-signin">
         <label>Password :</label>
         <input class="form-control" type="password" name="password" value="" />
     </div><br>

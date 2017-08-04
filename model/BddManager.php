@@ -3,8 +3,8 @@
 class BddManager {
     private $connexion;
 
-    public function __construct()
-    {
+    public function __construct(){
+        
     }
 
     public function getConnexion()
@@ -15,4 +15,5 @@ class BddManager {
         $this->connexion->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
       }
     }
+
 }
