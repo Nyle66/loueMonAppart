@@ -8,26 +8,31 @@
     <title>Annonces</title>
 </head>
 <body>
-    
+    <center><h3>Ajoutez une annonce</h3></center>
+
     <form action="annonces" method="post">
     <div class="form-annonce">
         <label>Titre :</label>
-        <input class="form-control" type="text" name="titre" value=""/>
+        <input class="form-control" type="text" name="titre" value="" placeholder="Choisissez un titre"/>
     </div><br>
 
     <div class="form-annonce">
         <label>Description :</label>
-        <input class="form-control" type="text" name="location" value=""/>
+        <input class="form-control" type="text" name="location" value="" placeholder="Ajoutez une description"/>
     </div><br>
 
     <div class="form-annonce">
         <label>Loyer:</label>
-        <input class="form-control" type="text" name="prix" value="" />
+        <input class="form-control" type="text" name="prix" value="" placeholder="Indiquez le prix" />
     </div><br>
 
     <button class="btn" type="submit">Envoyer l'annonce</button>
 
     </form>
+
+    <br>
+    <br>
+    <center><a href='retour'>Retour à l'Acceuil</a></center>
 
 </body>
 </html>

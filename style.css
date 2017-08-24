@@ -4,20 +4,43 @@ body {
     text-decoration: none;
 }
 nav{
-    padding-top: 40px;
+    padding-top: 10px;
+    border: solid black 2px;
+    border-radius: 10px;
+    width: 160px;
+    height: 150px;
+    position: fixed;
+    background-color: #E2DFDA;
+    font-size: 1.2em;
+}
+nav:hover{
+    background-color: #FBD694;
+}
+li:hover{
+    font-style: italic;
 }
 ul{
-    margin-left: 310px;
-    margin-right: 310px;
     list-style: none;
 }
-
+h1{
+    padding-top: 20px;
+    font-size: 3em;
+}
+h1:hover{
+    color: orangered;
+}
+h2{
+    color: grey;
+}
+h2:hover{
+    color: orangered;
+    font-style: italic;
+}
 form{
     display: flex;
-    padding-top: 100px;
+    padding-top: 50px;
     justify-content: center;
 }
-
 #log{
     width: 150px;
     height: auto;
@@ -26,4 +49,5 @@ form{
 #loca{
     width: 200px;
     height: auto;
+    padding-top: 25px;
 }

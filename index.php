@@ -21,6 +21,10 @@ Flight::route('GET /annonces', function(){
     Flight::render('annonces',array());
 });
 
+Flight::route('/retour', function(){
+    Flight::render('page',array());
+});
+
 Flight::route('/logout', function(){
     $_SESSION['user'] = "";
     session_destroy();

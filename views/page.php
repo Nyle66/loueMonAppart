@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="script.js"></script>
     <title>Ma Page</title>
 </head>
 <body>
@@ -21,8 +22,8 @@
             <li><a href='signup'>Sign-Up</a></li><br>";
              else:
             echo "<li><a href='annonces'>Annonces</a></li><br>
-            <li><a href='admin'>Admin</a></li><br>
-            <li><a href='logout'>Logout</a></li><br>";
+            <li><a href='logout'>Logout</a></li><br>
+            <li><a href='admin'>Admin</a></li><br>";
              endif;?>
         </ul>
         
@@ -47,7 +48,11 @@
         
         echo "<hr><center><h2>" . $l['titre'] . "</a></h2>";
         echo "<p>" . substr($l['location'],0,1000) . "</p>";
-        echo "<h3>" . $l['prix'] . " euros/mois" . "</a></h3></center><hr>";
+        echo "<h3>" . $l['prix'] . " euros/mois" . "</a></h3></center>";
+        echo "<center><button class='btn' type='submit' onclick='masquer_img(\"reserved\");'>Réserver</button></center>";
+        echo "<center><img src='reserved.png' alt='image' style='display:none;' id='reserved'></center>";
+        echo "<br>";
+        
         
         
         endforeach;?>

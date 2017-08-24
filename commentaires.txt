@@ -1,0 +1,8 @@
+/****
+* Alfonso: Jeremy tu étais malade et on ne sait pas ce que tu manges
+* Je te suggère salade pour les prochaine fois.
+* Malgré les difficultés je trouve que tu progresses. Il faut juste pratiquer un peu
+* Ne tappes pas les getters ni les setters!
+*
+* Avec la pratique les choses viendront ne t'inquiètes pas.
+* A bientôt!
