@@ -6,8 +6,7 @@ class User{
     private $username;
     private $email;
     private $password;
-    
-    //ctrl+i dans netbeans pour générer
+   
     function getId() {
         return $this->id;
     }
@@ -38,6 +37,10 @@ class User{
                                                                                 
     function setPassword($password) {
         $this->password = $password;
+    }
+
+    public function save(BddManager $bddManager){
+      $bddManager->insertUser($this);
     }
 
     

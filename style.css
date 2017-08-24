@@ -10,8 +10,6 @@ ul{
     margin-left: 310px;
     margin-right: 310px;
     list-style: none;
-    display: flex;
-    justify-content: space-around;
 }
 
 form{
@@ -24,4 +22,8 @@ form{
     width: 150px;
     height: auto;
     padding-top: 50px;
+}
+#loca{
+    width: 200px;
+    height: auto;
 }

@@ -9,5 +9,25 @@
 </head>
 <body>
     
+    <form action="annonces" method="post">
+    <div class="form-annonce">
+        <label>Titre :</label>
+        <input class="form-control" type="text" name="titre" value=""/>
+    </div><br>
+
+    <div class="form-annonce">
+        <label>Description :</label>
+        <input class="form-control" type="text" name="location" value=""/>
+    </div><br>
+
+    <div class="form-annonce">
+        <label>Loyer:</label>
+        <input class="form-control" type="text" name="prix" value="" />
+    </div><br>
+
+    <button class="btn" type="submit">Envoyer l'annonce</button>
+
+    </form>
+
 </body>
 </html>
