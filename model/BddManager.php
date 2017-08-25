@@ -16,7 +16,6 @@ class BddManager {
       }
     }
 
-
     public function insertUser(User $user){
       $this->getConnexion();
       $query="INSERT INTO user SET username=:username, email=:email, password=:password";
@@ -43,7 +42,6 @@ class BddManager {
         return $pdo->rowCount();
     }
 
-
     public function getUserById(User $user){
         $this->getConnexion();
 
@@ -51,10 +49,10 @@ class BddManager {
         $object->execute(array(
             'username'=>$user->getUsername()
         ));
-        $users = $object->fetchAll(PDO::FETCH_ASSOC);
+        $userdata = $object->fetch(PDO::FETCH_ASSOC);
 
-        if(!empty($users)){
-          return $users;
+        if(!empty($userdata)){
+          return new User($userdata);
         }
         return false;
     }
@@ -68,4 +66,16 @@ class BddManager {
         return $data;
         $req->closeCursor();
       }
+
+      public function deleteAnnonces(Annonces $annonces){
+      $this->getConnexion();
+      $query="DELETE FROM annonce WHERE id=:id"; 
+        $pdo = $this->connexion->prepare($query);
+        $pdo->execute(array(
+            'id' =>$annonces->getId()
+        ));
+        return $pdo->rowCount();
+    }
+
+
 }

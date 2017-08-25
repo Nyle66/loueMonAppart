@@ -47,6 +47,8 @@ class Annonces{
       return $bddManager->getAnnonces($this);
     }
 
-    
+    public function delete(BddManager $bddManager){
+      return $bddManager->deleteAnnonces($this);
+    }
 
 }

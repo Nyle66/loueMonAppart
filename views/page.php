@@ -8,6 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="style.css">
     <script type="text/javascript" src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
     <title>Ma Page</title>
 </head>
 <body>
@@ -17,20 +18,23 @@
     <nav>
        
         <ul id="test">
-            <?php if(empty($_SESSION["user"])):
+            <?php 
+
+            if(empty($_SESSION["user"])):
             echo "<li><a href='signin'>Sign-In</a></li><br>
             <li><a href='signup'>Sign-Up</a></li><br>";
              else:
             echo "<li><a href='annonces'>Annonces</a></li><br>
-            <li><a href='logout'>Logout</a></li><br>
-            <li><a href='admin'>Admin</a></li><br>";
-             endif;?>
+            <li><a href='logout'>Logout</a></li><br>";endif;?>
+
+            <?php if(!empty($_SESSION["user"]) && $_SESSION["user"]->getAdmin() == 1):
+            echo "<li><a href='admin'>Admin</a></li><br>";
+            endif;?>
         </ul>
-        
 
     </nav>
 
-    <center><div id="loca"><img src="lock.png" alt="image" ></div></center>
+    <center><img src="clash.png" alt="image" id="clash" ></center>
 
         <br>
         <br>
@@ -46,15 +50,15 @@
 
         foreach($post as $l):
         
-        echo "<hr><center><h2>" . $l['titre'] . "</a></h2>";
+        echo "<hr><center id='center'><h2>" . $l['titre'] . "</a></h2>";
         echo "<p>" . substr($l['location'],0,1000) . "</p>";
-        echo "<h3>" . $l['prix'] . " euros/mois" . "</a></h3></center>";
-        echo "<center><button class='btn' type='submit' onclick='masquer_img(\"reserved\");'>Réserver</button></center>";
+        echo "<h3>" . $l['prix'] . " euros/mois" . "</a></h3></center>";?>
+        <?php if(!empty($_SESSION["user"])):
+        echo "<center><button class='btn-form' type='submit' onclick='masquer_img(\"reserved\");'>Réserver</button></center>";
         echo "<center><img src='reserved.png' alt='image' style='display:none;' id='reserved'></center>";
         echo "<br>";
-        
-        
-        
+        endif;
+    
         endforeach;?>
 
 </body>

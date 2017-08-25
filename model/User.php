@@ -6,6 +6,11 @@ class User{
     private $username;
     private $email;
     private $password;
+    private $admin;
+
+    function __construct($data = []){
+        $this->hydrate($data);
+    }
    
     function getId() {
         return $this->id;
@@ -21,6 +26,10 @@ class User{
 
     function getPassword() {
         return $this->password;
+    }
+
+    function getAdmin() {
+        return $this->admin;
     }
 
     function setId($id) {
@@ -39,10 +48,32 @@ class User{
         $this->password = $password;
     }
 
+    function setAdmin($admin) {
+        $this->admin = $admin;
+    }
+
     public function save(BddManager $bddManager){
       $bddManager->insertUser($this);
     }
 
-    
+    public function hydrate(array $donneesPdo){
+        if(empty($donneesPdo) == false){
+            foreach ($donneesPdo as $key => $value){
+                $newString=$key;
+                if(preg_match("#_#",$key)){
+                    $word = explode("_",$key);
+                    $newString = "";
+                    foreach ($word as $w){
+                        $newString.=ucfirst($w);
+                    }
+                }
+                $method = "set".ucfirst($newString);
+                if(method_exists($this,$method)){
+                    $this->$method($value);
+                }
+            }
+        }
+    }
+
 
 }

@@ -25,6 +25,14 @@ Flight::route('/retour', function(){
     Flight::render('page',array());
 });
 
+Flight::route('GET /admin', function(){
+    Flight::render('admin',array());
+});
+
+Flight::route('GET /update', function(){
+    Flight::render('update',array());
+});
+
 Flight::route('/logout', function(){
     $_SESSION['user'] = "";
     session_destroy();
@@ -68,7 +76,6 @@ Flight::route('POST /signin',function(){
          Flight::redirect('page');
     }
 
-
 });
 
 Flight::route('POST /annonces',function(){
@@ -86,8 +93,17 @@ Flight::route('POST /annonces',function(){
     $loc->saveLoc($bdd);
 
     Flight::redirect('page');
+});
 
+Flight::route('POST /admin/delete/@id',function($id){
 
+    $admin = new Annonces();
+    $admin->setId($id);
+    $bdd = new BddManager();
+
+    $admin->delete($bdd);
+
+    Flight::redirect('/admin');
 });
 
 Flight::start();

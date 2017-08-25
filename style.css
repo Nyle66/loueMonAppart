@@ -1,7 +1,9 @@
 body {
     background-color: #C2D1CF;
-    font-family: arial;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.1em;
     text-decoration: none;
+    padding-bottom: 60px;
 }
 nav{
     padding-top: 10px;
@@ -12,12 +14,34 @@ nav{
     position: fixed;
     background-color: #E2DFDA;
     font-size: 1.2em;
+    
+}
+#center{
+    padding: 2px 0 2px 0;
+    transition: all 0.8s;
+}
+#center:hover{
+    background-color: #E2DFDA;
+    border-radius: 20px;
+    font-size: 1.15em;
+    transition-duration: 0.6s;
+
+}
+#clash{
+    width: 600px;
+}
+a{
+    text-decoration: none;
 }
 nav:hover{
     background-color: #FBD694;
 }
+li{
+    transition: all 0.6s;
+}
 li:hover{
-    font-style: italic;
+    font-style: bolder;
+    font-size: 1.3em;
 }
 ul{
     list-style: none;
@@ -25,17 +49,15 @@ ul{
 h1{
     padding-top: 20px;
     font-size: 3em;
+    text-decoration: underline;
 }
 h1:hover{
-    color: orangered;
+    color: #C7A137;
 }
 h2{
     color: grey;
 }
-h2:hover{
-    color: orangered;
-    font-style: italic;
-}
+
 form{
     display: flex;
     padding-top: 50px;
@@ -45,9 +67,4 @@ form{
     width: 150px;
     height: auto;
     padding-top: 50px;
-}
-#loca{
-    width: 200px;
-    height: auto;
-    padding-top: 25px;
 }

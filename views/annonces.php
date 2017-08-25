@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
     <title>Annonces</title>
 </head>
 <body>
@@ -32,6 +33,7 @@
 
     <br>
     <br>
+    
     <center><a href='retour'>Retour à l'Acceuil</a></center>
 
 </body>
