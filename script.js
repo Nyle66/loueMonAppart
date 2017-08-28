@@ -1,3 +1,4 @@
+
 function masquer_img(id)
 {
   if (document.getElementById(id).style.display == 'none') {

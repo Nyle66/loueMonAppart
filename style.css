@@ -49,10 +49,7 @@ ul{
 h1{
     padding-top: 20px;
     font-size: 3em;
-    text-decoration: underline;
-}
-h1:hover{
-    color: #C7A137;
+    font-family: 'Megrim', cursive;
 }
 h2{
     color: grey;
@@ -68,3 +65,4 @@ form{
     height: auto;
     padding-top: 50px;
 }
+

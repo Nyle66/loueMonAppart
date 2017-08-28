@@ -6,6 +6,7 @@ class Annonces{
     private $titre;
     private $location;
     private $prix;
+    private $image;
    
     function getId() {
         return $this->id;

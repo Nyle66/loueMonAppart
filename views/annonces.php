@@ -11,6 +11,12 @@
 <body>
     <center><h3>Ajoutez une annonce</h3></center>
 
+
+    <form enctype="multipart/form-data" action="uploaderService.php" method="POST">
+        Choississez une image: <input name="uploadedfile" type="file" /><br />
+        <input type="submit" value="Upload File" />
+    </form>
+
     <form action="annonces" method="post">
     <div class="form-annonce">
         <label>Titre :</label>
@@ -30,7 +36,7 @@
     <button class="btn" type="submit">Envoyer l'annonce</button>
 
     </form>
-
+   
     <br>
     <br>
     
