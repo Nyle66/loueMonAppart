@@ -6,7 +6,8 @@ class Annonces{
     private $titre;
     private $location;
     private $prix;
-    private $image;
+    private $lieux;
+    private $locataire;
    
     function getId() {
         return $this->id;
@@ -22,6 +23,14 @@ class Annonces{
 
     function getPrix() {
         return $this->prix;
+    }
+
+    function getLieux() {
+        return $this->lieux;
+    }
+
+    function getLocataire() {
+        return $this->locataire;
     }
 
     function setId($id) {
@@ -40,6 +49,14 @@ class Annonces{
         $this->prix = $prix;
     }
 
+    function setLieux($lieux) {
+        $this->lieux = $lieux;
+    }
+
+    function setLocataire($locataire) {
+        $this->locataire = $locataire;
+    }
+
     public function saveLoc(BddManager $bddManager){
       $bddManager->insertLoc($this);
     }
@@ -51,5 +68,13 @@ class Annonces{
     public function delete(BddManager $bddManager){
       return $bddManager->deleteAnnonces($this);
     }
+
+    public function reserve(BddManager $bddManager){
+        $bddManager->reservation($this);
+      }
+
+      public function dereserve(BddManager $bddManager){
+        $bddManager->dereservation($this);
+      }
 
 }

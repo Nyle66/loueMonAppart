@@ -29,9 +29,22 @@ Flight::route('GET /admin', function(){
     Flight::render('admin',array());
 });
 
-Flight::route('GET /update', function(){
-    Flight::render('update',array());
+Flight::route('POST /serviceReservation', function(){
+    $bdd = new BddManager();
+    $annonce = new Annonces();
+    $annonce-> setId($_POST['id']); 
+    $annonce->reserve($bdd);
+    Flight::redirect('page');
 });
+
+Flight::route('POST /servicedeReservation', function(){
+    $bdd = new BddManager();
+    $annonce = new Annonces();
+    $annonce-> setId($_POST['id']); 
+    $annonce->dereserve($bdd);
+    Flight::redirect('admin');
+});
+
 
 Flight::route('/logout', function(){
     $_SESSION['user'] = "";
@@ -83,12 +96,16 @@ Flight::route('POST /annonces',function(){
     $titre = Flight::request()->data['titre'];
     $location = Flight::request()->data['location'];
     $prix = Flight::request()->data['prix'];
+    $lieux = Flight::request()->data['lieux'];
+    $locataire = Flight::request()->data['locataire'];
 
     $loc = new Annonces();
     $bdd = new BddManager();
     $loc->setTitre($titre);
     $loc->setLocation($location);
     $loc->setPrix($prix);
+    $loc->setLieux($lieux);
+    $loc->setLocataire($locataire);
 
     $loc->saveLoc($bdd);
 

@@ -11,6 +11,12 @@
 <body>
     
     <?php
+
+if($_SESSION["user"]->getAdmin() == 0){
+
+    Flight::redirect("page"); }
+
+
         $annonces = new Annonces();
         $bdd = new BddManager();
         $post = $annonces->show($bdd);
@@ -20,8 +26,13 @@
         echo "<hr><center><h2>" . $l['titre'] . "</a></h2>";
         echo "<p>" . substr($l['location'],0,1000) . "</p>";
         echo "<h3>" . $l['prix'] . " euros/mois" . "</a></h3></center>";
-        echo "<form method='post' action='admin/delete/".$l['id']."' ><button class='btn' type='submit'>Supprimer</button></form>";
+        echo "<form method='post' action='admin/delete/".$l['id']."' ><input class='btn' type='submit' value='Supprimer'/></form>";
+
+        if($l['locataire']==1){
+        echo "<form method='post' action='servicedeReservation/' ><input type='hidden' name='id' value='".$l['id']."'/><input class='btn' type='submit' value='Dé-réserver'/></form>";
+        }
         echo "<br>";
+       
     
         endforeach;?>
 

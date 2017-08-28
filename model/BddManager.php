@@ -31,12 +31,14 @@ class BddManager {
 
     public function insertLoc(Annonces $annonces){
       $this->getConnexion();
-      $query="INSERT INTO annonce SET titre=:titre, location=:location, prix=:prix";
+      $query="INSERT INTO annonce SET titre=:titre, location=:location, prix=:prix, lieux=:lieux, locataire=:locataire";
         $pdo = $this->connexion->prepare($query);
         $pdo->execute(array(
             'titre'=>$annonces->getTitre(),
             'location' => $annonces->getLocation(),
-            'prix'=>$annonces->getPrix()
+            'prix'=>$annonces->getPrix(),
+            'lieux'=>$annonces->getLieux(),
+            'locataire'=>'0'
       
         ));
         return $pdo->rowCount();
@@ -73,6 +75,28 @@ class BddManager {
         $pdo = $this->connexion->prepare($query);
         $pdo->execute(array(
             'id' =>$annonces->getId()
+        ));
+        return $pdo->rowCount();
+    }
+
+    public function reservation(Annonces $annonces){
+        $this->getConnexion();
+        $query="UPDATE annonce SET locataire=:locataire WHERE id=:id";
+        $pdo = $this->connexion->prepare($query);
+        $pdo->execute(array(
+            'id' =>$annonces->getId(),
+            'locataire'=>"1"
+        ));
+        return $pdo->rowCount();
+    }
+
+    public function dereservation(Annonces $annonces){
+        $this->getConnexion();
+        $query="UPDATE annonce SET locataire=:locataire WHERE id=:id";
+        $pdo = $this->connexion->prepare($query);
+        $pdo->execute(array(
+            'id' =>$annonces->getId(),
+            'locataire'=>"0"
         ));
         return $pdo->rowCount();
     }

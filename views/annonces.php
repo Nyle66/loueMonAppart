@@ -12,15 +12,29 @@
     <center><h3>Ajoutez une annonce</h3></center>
 
 
-    <form enctype="multipart/form-data" action="uploaderService.php" method="POST">
-        Choississez une image: <input name="uploadedfile" type="file" /><br />
-        <input type="submit" value="Upload File" />
-    </form>
-
     <form action="annonces" method="post">
     <div class="form-annonce">
-        <label>Titre :</label>
-        <input class="form-control" type="text" name="titre" value="" placeholder="Choisissez un titre"/>
+    <label>Lieux :</label>
+        <select id="titre" name="titre">
+        <option value="Studio">Studio</option>
+        <option value="Appartement">Appartement</option>
+        <option value="Maison">Maison</option>
+        <option value="Villa">Villa</option>
+        </select>
+       
+    </div><br>
+
+    <div class="form-annonce">
+        <label>Lieux :</label>
+        <select id="loca" name="lieux">
+        <option value="Bourg-palette">Bourg-Palette</option>
+        <option value="Argenta">Argenta</option>
+        <option value="Azuria">Azuria</option>
+        <option value="Carmin-sur-Mer">Carmin-sur-Mer</option>
+        <option value="Céladopole">Céladopole</option>
+        <option value="Safrania">Safrania</option>
+        <option value="Jadielle">Jadielle</option>
+        </select>
     </div><br>
 
     <div class="form-annonce">
