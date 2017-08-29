@@ -31,14 +31,15 @@ class BddManager {
 
     public function insertLoc(Annonces $annonces){
       $this->getConnexion();
-      $query="INSERT INTO annonce SET titre=:titre, location=:location, prix=:prix, lieux=:lieux, locataire=:locataire";
+      $query="INSERT INTO annonce SET titre=:titre, location=:location, prix=:prix, lieux=:lieux, locataire=:locataire, image=:image";
         $pdo = $this->connexion->prepare($query);
         $pdo->execute(array(
             'titre'=>$annonces->getTitre(),
             'location' => $annonces->getLocation(),
             'prix'=>$annonces->getPrix(),
             'lieux'=>$annonces->getLieux(),
-            'locataire'=>'0'
+            'locataire'=>'0',
+            'image'=>$annonces->getImage()
       
         ));
         return $pdo->rowCount();

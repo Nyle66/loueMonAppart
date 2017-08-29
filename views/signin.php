@@ -11,7 +11,7 @@
 
 <center><img src="login.png" alt="cadenas" class="log"></center>
 
-    <form action="signin" method="post">
+    <center><form action="signin" method="post">
     <div class="form-signin">
         <label>Username :</label>
         <input class="form-control" type="text" name="username" value=""/>
@@ -24,7 +24,7 @@
 
     <button class="btn" type="submit">Se connecter</button>
 
-    </form>
+    </form></center>
 
     <br>
     <br>

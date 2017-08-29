@@ -55,11 +55,12 @@
             echo "<hr><center id='center'><div id='fond' class='animated fadeInLeft'><h2>" . $post[$i]['titre'] . "</a></h2>";
             echo "<h3><span style='color: orangered;'>" . $post[$i]['lieux'] . "<span></h3>";
             echo "<p>" . substr($post[$i]['location'],0,1000) . "</p>";
-            echo "<h3>" . $post[$i]['prix'] . " euros/mois" . "</a></h3></center>";
+            echo "<h3>" . $post[$i]['prix'] . " euros/mois" . "</a></h3></center><br>";
+            echo "<center><img src='" . $post[$i]['image'] . "' alt='photo' class='photo animated pulse'</a></center></center>";
 
             if(!empty($_SESSION["user"]) && $post[$i]['locataire']==0){
             
-                echo "<center><form action='serviceReservation' method='post' ><input type='hidden' name='id' value=' " . $post[$i]['id'] . "' /><input class='btn-form' type='submit' value='Réserver'></form></center>";
+                echo "<center><form action='serviceReservation' method='post' ><input type='hidden' name='id' value=' " . $post[$i]['id'] . "' /><input class='btn' type='submit' value='Réserver'></form></center>";
                 echo "<br>";
             }
             elseif($post[$i]['locataire']==1){

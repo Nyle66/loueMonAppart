@@ -27,10 +27,10 @@ if($_SESSION["user"]->getAdmin() == 0){
         echo "<hr><center><h2>" . $l['titre'] . "</a></h2>";
         echo "<p>" . substr($l['location'],0,1000) . "</p>";
         echo "<h3>" . $l['prix'] . " euros/mois" . "</a></h3></center>";
-        echo "<form method='post' action='admin/delete/".$l['id']."' ><input class='btn' type='submit' value='Supprimer'/></form>";
+        echo "<center><form method='post' action='admin/delete/".$l['id']."' ><input class='btn' type='submit' value='Supprimer'/></form></center>";
 
         if($l['locataire']==1){
-        echo "<form method='post' action='servicedeReservation/' ><input type='hidden' name='id' value='".$l['id']."'/><input class='btn' type='submit' value='Dé-réserver'/></form>";
+        echo "<center><form method='post' action='servicedeReservation/' ><input type='hidden' name='id' value='".$l['id']."'/><input class='btn' type='submit' value='Dé-réserver'/></form></center>";
         }
         echo "<br>";
        

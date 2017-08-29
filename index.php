@@ -98,6 +98,7 @@ Flight::route('POST /annonces',function(){
     $prix = Flight::request()->data['prix'];
     $lieux = Flight::request()->data['lieux'];
     $locataire = Flight::request()->data['locataire'];
+    $image = Flight::request()->data['image'];
 
     $loc = new Annonces();
     $bdd = new BddManager();
@@ -106,6 +107,7 @@ Flight::route('POST /annonces',function(){
     $loc->setPrix($prix);
     $loc->setLieux($lieux);
     $loc->setLocataire($locataire);
+    $loc->setImage($image);
 
     $loc->saveLoc($bdd);
 

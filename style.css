@@ -65,9 +65,8 @@ h2{
     color: grey;
 }
 form{
-    display: flex;
+    display: block;
     padding-top: 20px;
-    justify-content: center;
 }
 .log{
     width: 150px;
@@ -93,4 +92,18 @@ form{
 #h2admin{
     font-size: 2em;
     color: black;
+}
+.photo{
+    z-index: 3;
+    width: 350px;
+    border-radius: 10px;
+    border: 2px solid grey;
+    filter: blur(2.5px);
+    transition: all 0.8s;
+}
+.photo:hover{
+    filter: none;
+}
+.btn{
+    font-size: 1em;
 }

@@ -8,6 +8,7 @@ class Annonces{
     private $prix;
     private $lieux;
     private $locataire;
+    private $image;
    
     function getId() {
         return $this->id;
@@ -33,6 +34,10 @@ class Annonces{
         return $this->locataire;
     }
 
+    function getImage() {
+        return $this->image;
+    }
+
     function setId($id) {
         $this->id = $id;
     }
@@ -55,6 +60,10 @@ class Annonces{
 
     function setLocataire($locataire) {
         $this->locataire = $locataire;
+    }
+
+    function setImage($image) {
+        $this->image = $image;
     }
 
     public function saveLoc(BddManager $bddManager){

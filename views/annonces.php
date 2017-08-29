@@ -13,7 +13,7 @@
 <center><img src="pokedex.png" alt="pokedex" id="pokedex"></center>
     <center><h2>Ajoutez une annonce</h2></center>
 
-    <form action="annonces" method="post">
+    <center><form action="annonces" method="post">
     <div class="form-annonce">
     <label>Lieux :</label>
         <select id="titre" name="titre">
@@ -40,7 +40,7 @@
 
     <div class="form-annonce">
         <label>Description :</label>
-        <input class="form-control" type="text" name="location" value="" placeholder="Ajoutez une description"/>
+        <input class="form-control" type="text" name="location" value="" placeholder="Ajoutez une description" size="50"/>
     </div><br>
 
     <div class="form-annonce">
@@ -48,9 +48,14 @@
         <input class="form-control" type="text" name="prix" value="" placeholder="Indiquez le prix" />
     </div><br>
 
+    <div class="form-annonce">
+        <label>Image:</label>
+        <input class="form-control" type="text" name="image" value="" placeholder="Entrez l'URL de l'image" size="50"/>
+    </div><br>
+
     <button class="btn" type="submit">Envoyer l'annonce</button>
 
-    </form>
+    </form></center>
    
     <br>
     <br>

@@ -9,7 +9,7 @@
 </head>
 <body>
     <center><img src="login.png" alt="cadenas" class="log"></center>
-    <form action="signup" method="post">
+    <center><form action="signup" method="post" >
     <div class="form-signup">
         <label>Username :</label>
         <input class="form-control" type="text" name="username" value=""/>
@@ -25,7 +25,7 @@
 
     <button class="btn" type="submit">S'enregistrer</button>
 
-    </form>
+    </form></center>
 
     <br>
     <br>
