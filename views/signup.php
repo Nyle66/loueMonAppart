@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="animate.css">
     <title>Sign-Up</title>
 </head>
 <body>
-    <center><img src="login.png" alt="cadenas" class="log"></center>
+    <center><img src="login.png" alt="cadenas" class="log animated slideInDown"></center>
     <center><form action="signup" method="post" >
     <div class="form-signup">
         <label>Username :</label>

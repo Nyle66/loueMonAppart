@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="animate.css">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
     <title>Annonces</title>
 </head>
 <body>
 
-<center><img src="pokedex.png" alt="pokedex" id="pokedex"></center>
+<center><img src="pokedex.png" alt="pokedex" id="pokedex" class='animated rotateIn' ></center>
     <center><h2>Ajoutez une annonce</h2></center>
 
     <center><form action="annonces" method="post">

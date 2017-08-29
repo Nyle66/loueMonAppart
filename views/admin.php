@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="animate.css">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
     <title>admin</title>
 </head>
 <body>
-<center><img src="master.png" alt="masterball" id="master"></center>
+<center><img src="master.png" alt="masterball" id="master" class='animated wobble'></center>
 <center><h2 id='h2admin'>Panneau d'administration</h2></center>
     <?php
 
