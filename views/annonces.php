@@ -11,10 +11,10 @@
 </head>
 <body>
 
-<center><img src="pokedex.png" alt="pokedex" id="pokedex" class='animated rotateIn' ></center>
-    <center><h2>Ajoutez une annonce</h2></center>
+<center><img src="pokeball.png" alt="pokeball" id="pokeball" class='animated wobble' ></center>
+    <center class='animated fadeInRightBig'><h2>Ajoutez une annonce</h2></center>
 
-    <center><form action="annonces" method="post">
+    <center class='animated fadeInLeftBig'><form action="annonces" method="post">
     <div class="form-annonce">
     <label>Lieux :</label>
         <select id="titre" name="titre">
@@ -40,8 +40,8 @@
     </div><br>
 
     <div class="form-annonce">
-        <label>Description :</label>
-        <input class="form-control" type="text" name="location" value="" placeholder="Ajoutez une description" size="50"/>
+        <label>Description :</label><br>
+        <textarea class="form-control" type="text" name="location" value="" placeholder="Ajoutez une description" id='des'></textarea>
     </div><br>
 
     <div class="form-annonce">
