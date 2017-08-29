@@ -15,23 +15,26 @@ nav{
     background-color: #E2DFDA;
     font-size: 1.2em;
     z-index: 1;
-    
 }
 #center{
     padding: 2px 0 2px 0;
     transition: all 0.8s;
     z-index: 10;
-
 }
 #center:hover{
     background-color: #E2DFDA;
     border-radius: 20px;
     font-size: 1.40em;
     transition-duration: 0.6s;
-
+}
+p{
+    width: 650px;
 }
 #clash{
     width: 600px;
+}
+#rese{
+    width: 300px;
 }
 a{
     text-decoration: none;
@@ -61,19 +64,33 @@ h1{
 h2{
     color: grey;
 }
-
 form{
     display: flex;
-    padding-top: 50px;
+    padding-top: 20px;
     justify-content: center;
 }
-#log{
+.log{
     width: 150px;
     height: auto;
     padding-top: 50px;
 }
+#master{
+    width: 100px;
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
+#pokedex{
+    width: 100px;
+    padding-top: 20px;
+}
 #fond{
-    background-image: url("arrowtest.png");
+    background-image: url("pokearrow.png");
     background-repeat: no-repeat;
     height: 250px;
+    background-position-x: 200px;
+    background-position-y: 60px;
+}
+#h2admin{
+    font-size: 2em;
+    color: black;
 }

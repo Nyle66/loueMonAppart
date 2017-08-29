@@ -9,7 +9,8 @@
     <title>admin</title>
 </head>
 <body>
-    
+<center><img src="master.png" alt="masterball" id="master"></center>
+<center><h2 id='h2admin'>Panneau d'administration</h2></center>
     <?php
 
 if($_SESSION["user"]->getAdmin() == 0){

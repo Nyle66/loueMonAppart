@@ -8,7 +8,7 @@
     <title>Sign-Up</title>
 </head>
 <body>
-    <center><img src="login.png" alt="cadenas" id="log"></center>
+    <center><img src="login.png" alt="cadenas" class="log"></center>
     <form action="signup" method="post">
     <div class="form-signup">
         <label>Username :</label>
@@ -26,5 +26,10 @@
     <button class="btn" type="submit">S'enregistrer</button>
 
     </form>
+
+    <br>
+    <br>
+    
+    <center><a href='retour'>Retour à l'Acceuil</a></center>
 </body>
 </html>

@@ -9,8 +9,9 @@
     <title>Annonces</title>
 </head>
 <body>
-    <center><h3>Ajoutez une annonce</h3></center>
 
+<center><img src="pokedex.png" alt="pokedex" id="pokedex"></center>
+    <center><h2>Ajoutez une annonce</h2></center>
 
     <form action="annonces" method="post">
     <div class="form-annonce">

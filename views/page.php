@@ -15,7 +15,7 @@
 </head>
 <body>
 
-    <center><div class="animated fadeInLeftBig"><h1>Kanto - Location</h1></div></center>
+    <center><div class="animated fadeInLeftBig"><h1>K<span style='color: orangered;'>a</span>nto - Loc<span style='color: orangered;'>a</span>tion</h1></div></center>
     
     <nav class="animated rotateInDownLeft">
        
@@ -51,17 +51,19 @@
         $post = $annonces->show($bdd);
         
         for($i=0; $i<count($post); $i++){
+           
             echo "<hr><center id='center'><div id='fond' class='animated fadeInLeft'><h2>" . $post[$i]['titre'] . "</a></h2>";
-            echo "<h3>" . $post[$i]['lieux'] . "</h3>";
+            echo "<h3><span style='color: orangered;'>" . $post[$i]['lieux'] . "<span></h3>";
             echo "<p>" . substr($post[$i]['location'],0,1000) . "</p>";
             echo "<h3>" . $post[$i]['prix'] . " euros/mois" . "</a></h3></center>";
 
             if(!empty($_SESSION["user"]) && $post[$i]['locataire']==0){
+            
                 echo "<center><form action='serviceReservation' method='post' ><input type='hidden' name='id' value=' " . $post[$i]['id'] . "' /><input class='btn-form' type='submit' value='Réserver'></form></center>";
                 echo "<br>";
             }
             elseif($post[$i]['locataire']==1){
-                echo "<center><img src='reserved.png' id='" . $i . "' alt='reserve' ></center></div>";
+                echo "<center><img src='reserved.png' id='rese'" . $i . "' alt='reserve' ></center></div>";
             }
             
         }

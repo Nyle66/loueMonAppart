@@ -8,6 +8,9 @@
     <title>Sign-In</title>
 </head>
 <body>
+
+<center><img src="login.png" alt="cadenas" class="log"></center>
+
     <form action="signin" method="post">
     <div class="form-signin">
         <label>Username :</label>
@@ -22,5 +25,10 @@
     <button class="btn" type="submit">Se connecter</button>
 
     </form>
+
+    <br>
+    <br>
+    
+    <center><a href='retour'>Retour à l'Acceuil</a></center>
 </body>
 </html>
